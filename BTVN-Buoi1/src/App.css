@@ -1,0 +1,165 @@
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; 
+}
+
+/* kiểu Container  */
+.form-container {
+  max-width: 500px;
+  width: 90%; 
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Kiểu tiêu đề biểu mẫu */
+.form-title {
+  text-align: center;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Kiểu nhóm biểu mẫu */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* kiểu nhập dữ liệu */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="url"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box; /* Đảm bảo phần đệm không ảnh hưởng đến tổng chiều rộng */
+}
+
+/*kiểu nhóm Radio */
+.radio-group {
+  display: flex;
+  gap: 15px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+/*  kiểu nhóm Checkbox  */
+.checkbox-group {
+  display: flex;
+  gap: 15px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Kiểu nhập tệp */
+input[type="file"] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Kiểu văn bản */
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Kiểu nhóm nút */
+.button-group {
+  display: flex;
+  justify-content: center; /* Căn giữa các nút */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Kiểu nút */
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  min-width: 100px; 
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+}
+
+.submit-button:hover {
+  background-color: #388E3C;
+}
+
+/* Chỉ báo trường bắt buộc */
+.form-group label::after {
+  content: "*";
+  color: red;
+  margin-left: 4px;
+}
+
+/* Xóa chỉ báo bắt buộc cho các trường tùy chọn */
+.form-group:has(input[type="checkbox"]) label::after,
+.form-group:has(textarea) label::after {
+  content: none;
+}
+
+/* Điều chỉnh phản hồi */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .button-group button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
