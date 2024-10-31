@@ -1,0 +1,257 @@
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.cart-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cart-header h1 {
+    color: rgb(0, 45, 114);
+    font-size: 48px;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.cart-header a {
+    color: rgb(226, 93, 62);
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+
+table {
+    table-layout: fixed;
+}
+
+
+th:nth-child(1) { width: 400; } /* Product column */
+th:nth-child(2) { width: 200; } /* Price column */
+th:nth-child(3) { width: 200; } /* Quantity column */
+th:nth-child(4) { width: 200, } /* Total column */
+
+thead th {
+    text-align: left;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    color: #666;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+th:nth-child(2),
+th:nth-child(4) {
+    text-align: right;
+}
+
+th:nth-child(3) {
+    text-align: center;
+}
+
+tbody td {
+    padding: 30px 0;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: top;
+}
+
+
+td:nth-child(2) {
+    text-align: right;
+    padding-right: 40px;
+}
+
+td:nth-child(3) {
+    text-align: center;
+}
+
+td:nth-child(4) {
+    text-align: right;
+}
+
+.product-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.remove-button {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-brand {
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.product-name {
+    color: rgb(0, 45, 114);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.price-column {
+    color: #666;
+    font-size: 14px;
+}
+
+.quantity-control {
+    display: inline-flex; 
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin: 0 auto; 
+}
+
+.quantity-button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.quantity-input:focus {
+    outline: none;
+}
+
+.total-column {
+    color: rgb(0, 45, 114);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.cart-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+}
+
+.special-instructions {
+    flex: 1;
+    max-width: 600px;
+}
+
+.special-instructions h3 {
+    color: rgb(0, 45, 114);
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.special-instructions textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.cart-footer {
+    text-align: right;
+    min-width: 300px;
+}
+
+.cart-footer p {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.cart-total {
+    color: rgb(0, 45, 114);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+    background-color: rgb(226, 93, 62);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.checkout-button:hover {
+    background-color: rgb(204, 84, 56);
+}
+
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.breadcrumb span {
+    color: #666;
+}
+
+.breadcrumb a {
+    color: rgb(226, 93, 62);
+    text-decoration: none;
+}
+
+.breadcrumb .separator {
+    color: #666;
+    margin: 0 4px;
+}

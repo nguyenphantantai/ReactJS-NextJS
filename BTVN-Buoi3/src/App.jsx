@@ -5,6 +5,7 @@ import { HiOutlineTrash } from "react-icons/hi";
 import { HiOutlinePencil } from "react-icons/hi"; 
 import './App.css'
 
+
 function App() {
   const [tasks, setTasks] = useState([
     { id: 1, text: 'Create a react project 🔥', date: '5:23 AM, 01/06/2022'},
@@ -13,6 +14,7 @@ function App() {
   ]);
   
   const [newTask, setNewTask] = useState('');
+  const [editingTask, setEditingTask] = useState (false);
   const [filter, setFilter] = useState('All');
 
   const addTask = () => {
@@ -29,6 +31,12 @@ function App() {
     }
     setNewTask('');
   };
+  const updateTask = () => {
+    setTasks(tasks.map(task => 
+      task.id === editingTask.id ? { ...task, text : newTask  } : task
+    ));
+      setEditingTask(null)
+  }
 
   const toggleTask = (id) => {
     setTasks(tasks.map(task => 
@@ -44,6 +52,9 @@ function App() {
     setEditingTask(task);
     setNewTask(task.text);
   };
+
+
+
 
   const filteredTasks = tasks.filter(task => {
     if (filter === 'All') return true;
@@ -66,9 +77,13 @@ function App() {
           placeholder="input"
           className="input"
         />
-        <button onClick={addTask} className="add-button">
+         {
+          editingTask ?  <button onClick={updateTask} className="add-button">
+          capnhat
+        </button> : <button onClick={addTask} className="add-button">
           Thêm
         </button>
+         }
 
         <select 
         value={filter} 
